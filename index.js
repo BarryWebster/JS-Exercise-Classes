@@ -167,7 +167,7 @@ grade(student, subject){
 class Student extends Lambdasian{
   constructor ({name, age, location, previousBackground, className, favSubjects}){
   super ({name, age, location, previousBackground, className, favSubjects});
-  this.previousBackground = previousackground;
+  this.previousBackground = previousBackground;
   this.className = className;
   this.favSubjects = favSubjects;
 }
@@ -177,10 +177,11 @@ listSubjects(){
 PRAssignment(subject){
   return `${this.name} has submitted a PR for ${subject}`;
 }
-sprintChallenge(){ 
-  return `${this.name} has been sprint challenge on ${subject}`
+sprintChallenge(subject){ 
+  return `${this.name} has begun sprint challenge on ${subject}`;
 }
 }
+
 
 /*
   TASK 6
@@ -201,14 +202,14 @@ class ProjectManager extends Instructor {
     this.gradClassName = gradClassName;
     this.favInstructor = favInstructor;
   }
-  standup(channel){
+  standUp(channel){
     return `${this.name} announces to ${channel}, @channel standy times!`;
   }
   debugsCode(student, subject){
     return `${this.name} debugs ${student.name}'s code on ${subject}`;
   }  
 }
-}
+
 /*
   STRETCH PROBLEM (no tests!)
     - Extend the functionality of the Student by adding a prop called grade and setting it equal to a number between 1-100.
